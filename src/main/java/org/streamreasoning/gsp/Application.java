@@ -28,7 +28,7 @@ import java.io.IOException;
  * and some desktop browsers.
  */
 @SpringBootApplication
-@Theme("my-app")
+@Theme("rspview")
 @Push
 public class Application implements AppShellConfigurator {
 

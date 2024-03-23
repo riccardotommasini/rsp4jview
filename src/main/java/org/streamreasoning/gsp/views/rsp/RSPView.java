@@ -921,14 +921,14 @@ public class RSPView extends Composite<VerticalLayout> {
 
         AceCustomModeRule keywords = new AceCustomModeRule();
         keywords.setRegex("[a-zA-Z_$][a-zA-Z0-9_$]*\\b");
-        keywords.setKeywordMapper(
-                Map.of(
-                        AceCustomModeTokens.KEYWORD, String.join("|", custom)
-                ),
-                AceCustomModeTokens.IDENTIFIER,
-                true,
-                "|"
-        );
+//        keywords.setKeywordMapper(
+//                Map.of(
+//                        AceCustomModeTokens.KEYWORD, String.join("|", custom)
+//                ),
+//                AceCustomModeTokens.IDENTIFIER,
+//                true,
+//                "|"
+//        );
 
 
         ArrayList<String> fs = new ArrayList<String>();
@@ -936,12 +936,12 @@ public class RSPView extends Composite<VerticalLayout> {
 
         AceCustomModeRule functions = new AceCustomModeRule();
         functions.setRegex("[a-z][a-zA-Z0-9]*\\b");
-        functions.setKeywordMapper(
-                Map.of(AceCustomModeTokens.VARIABLE, String.join("|", fs)),
-                AceCustomModeTokens.VARIABLE,
-                true,
-                "|"
-        );
+//        functions.setKeywordMapper(
+//                Map.of(AceCustomModeTokens.VARIABLE, String.join("|", fs)),
+//                AceCustomModeTokens.VARIABLE,
+//                true,
+//                "|"
+//        );
 
 
         AceCustomModeRule lineComment = new AceCustomModeRule();
@@ -949,8 +949,8 @@ public class RSPView extends Composite<VerticalLayout> {
         lineComment.setToken(AceCustomModeTokens.COMMENT);
 
         AceCustomModeRule blockComment = new AceCustomModeRule();
-        blockComment.setStart("/\\*");
-        blockComment.setEnd("\\*/");
+//        blockComment.setStart("/\\*");
+//        blockComment.setEnd("\\*/");
         blockComment.setToken(AceCustomModeTokens.COMMENT);
 
         customMode.addState(

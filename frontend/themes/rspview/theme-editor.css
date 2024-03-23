@@ -1,0 +1,17 @@
+/*
+ * This file has been created by the Vaadin Theme Editor. Please note that
+ * manual changes to individual CSS properties may be overwritten by the theme editor.
+ */
+vaadin-button.special { --lumo-primary-text-color:magenta; }
+
+vaadin-button {
+  border-color:rgba(173,43,43,1);
+  border-width:3px;
+}
+
+vaadin-horizontal-layout {
+  background-color:rgba(227,11,11,0);
+  border-color:rgba(30,56,24,0.94);
+  border-radius:0;
+  border-width:0px;
+}

@@ -147,6 +147,7 @@
   width: 100%;
 }
 
+
 .r-sp-view[dragging] vaadin-form-layout {
   padding: 8px;
 }
@@ -163,3 +164,4 @@
   min-width: 64px;
   min-height: 32px;
 }
+

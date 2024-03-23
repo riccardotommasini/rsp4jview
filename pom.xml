@@ -6,7 +6,7 @@
     <!-- Project from https://start.vaadin.com/project/267487b5-48ab-4e39-9f22-6aacc9f744d2 -->
     <groupId>com.example.application</groupId>
     <artifactId>my-app</artifactId>
-    <name>my-app</name>
+    <name>rspview</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -51,11 +51,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.vaadin.addons.componentfactory</groupId>
-            <artifactId>vcf-timeline</artifactId>
-            <version>1.0.2</version>
-        </dependency>
-        <dependency>
             <groupId>com.vaadin.componentfactory</groupId>
             <artifactId>popup</artifactId>
             <version>24.0.4</version>
@@ -84,11 +79,6 @@
             <artifactId>vis-network-vaadin</artifactId>
             <version>2.0.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -105,19 +95,9 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-testbench-junit5</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>de.f0rce</groupId>
             <artifactId>ace</artifactId>
-            <version>3.5.2</version>
+            <version>3.4.2</version>
         </dependency>
         <!--        RSP4J-->
         <dependency>
@@ -157,6 +137,7 @@
             <artifactId>neo4j</artifactId>
             <version>5.16.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.neo4j.community</groupId>
             <artifactId>it-test-support</artifactId>
@@ -214,6 +195,13 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <!-- To always force an optimized production bundle build set this configuration to 'true' -->
+                    <!-- To possibly use the pre-compiled production bundle remove or set to 'false' -->
+                    <forceProductionBuild>true</forceProductionBuild>
+                    <!-- To have reproducible build by running 'npm ci' -->
+                    <ciBuild>true</ciBuild>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -233,6 +221,11 @@
                             <artifactId>vaadin-dev</artifactId>
                         </exclusion>
                     </exclusions>
+                </dependency>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>flow-server-production-mode</artifactId>
+                    <version>24.3.7</version>
                 </dependency>
             </dependencies>
             <build>
